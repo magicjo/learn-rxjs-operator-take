@@ -1,12 +1,12 @@
 // RxJS v6+
-import { interval } from 'rxjs';
-import { take } from 'rxjs/operators';
+import { interval } from "rxjs";
+import { take } from "rxjs/operators";
 
 /*
- Fitering Operator: take
+ Filtering Operator: take
  -----------------------
 
- Operator to capture only the first N emitted values from a source.
+ Takes the first **count** values from the source, then completes.
  ```
  take(count: number): Observable
  ```
@@ -21,9 +21,9 @@ const source = interval(1000);
 const example = source.pipe(take(5));
 
 // Receive: 0, 1, 2, 3, 4
-console.log('[start]')
+console.log("[start]");
 example.subscribe({
-  next: value => console.log('[next] : ', value),
-  error: err => console.error('[error] : ', err),
-  complete: () => console.log('[complete]')
+  complete: () => console.log("[complete]"),
+  error: err => console.error("[error] : ", err),
+  next: value => console.log("[next] : ", value)
 });
