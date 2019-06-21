@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/magicjo/learn-rxjs-operator-take.svg?branch=master)](https://travis-ci.org/magicjo/learn-rxjs-operator-take)
+
 # learn-rxjs-operator-take
 
 Example about the filtering operator `take`.
